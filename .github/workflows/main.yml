@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to Vercel
         run: npx vercel --prod -y
-        uses: amondnet/vercel-action@master
+
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
