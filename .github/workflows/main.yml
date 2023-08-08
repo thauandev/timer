@@ -24,4 +24,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
-          args: '--prod --confirm   github-deployment: true'
+          github-deployment: true
