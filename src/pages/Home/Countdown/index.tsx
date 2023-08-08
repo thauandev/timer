@@ -18,7 +18,7 @@ const Countdown = () => {
   useEffect(() => {
     let interval: number
     if (activeCycle) {
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         const secondsDifference = differenceInSeconds(
           new Date(),
           new Date(activeCycle.startDate)
