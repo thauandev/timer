@@ -19,7 +19,7 @@ jobs:
         run: npm run build # Ou o comando necessário para construir o seu app
 
       - name: Deploy to Vercel
-        uses: vercel/actions@v2.1.0
+        uses: vercel/actions@v2.307.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
