@@ -7,6 +7,7 @@ import { HistoryContainer, HistoryList, Status } from './styles'
 
 const History: React.FC = () => {
   const { cycles } = useContext(CyclesContext)
+
   return (
     <HistoryContainer>
       <h1>Meu histórico</h1>
