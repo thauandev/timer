@@ -19,9 +19,6 @@ jobs:
         run: npm run build # Ou o comando necessário para construir o seu app
 
       - name: Deploy to Vercel
-
-        uses: amondnet/vercel-action@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
-          github-deployment: true
+        run: npx vercel --prod --confirm
+        env:
+          YOUR_VERCEL_TOKEN: ${{ secrets.YOUR_VERCEL_TOKEN }}
