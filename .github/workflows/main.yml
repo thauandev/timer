@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: pnpm install # Ou yarn install, dependendo das suas configurações
+        run: npm install # Ou yarn install, dependendo das suas configurações
 
       - name: Build
-        run: pnpm run build # Ou o comando necessário para construir o seu app
+        run: npm run build # Ou o comando necessário para construir o seu app
 
       - name: Deploy to Vercel
         run: npx vercel --prod --yes
