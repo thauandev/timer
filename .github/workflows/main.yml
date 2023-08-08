@@ -19,6 +19,6 @@ jobs:
         run: npm run build # Ou o comando necessário para construir o seu app
 
       - name: Deploy to Vercel
-        run: echo $YOUR_VERCEL_TOKEN
+        run: npx vercel --prod --yes
         env:
-          YOUR_VERCEL_TOKEN: ${{ secrets.YOUR_VERCEL_TOKEN }}
+          YOUR_VERCEL_TOKEN: $YOUR_VERCEL_TOKEN
