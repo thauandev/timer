@@ -4,8 +4,6 @@ import { useContext, useEffect } from 'react'
 import { CyclesContext } from '../../../contexts/CycleContext'
 import { CountdownContainer } from './styles'
 
-// import { Container } from './styles';
-
 const Countdown = () => {
   const {
     activeCycle,
