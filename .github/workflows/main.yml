@@ -21,6 +21,6 @@ jobs:
       - name: Deploy to Vercel
         run: npx vercel --prod -y
 
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
+        # with:
+        #   github-token: ${{ secrets.GITHUB_TOKEN }}
+        #   vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
