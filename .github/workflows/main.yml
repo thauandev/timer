@@ -21,4 +21,4 @@ jobs:
       - name: Deploy to Vercel
         run: npx vercel --prod --yes
         env:
-          YOUR_VERCEL_TOKEN: $YOUR_VERCEL_TOKEN
+          YOUR_VERCEL_TOKEN: ${secret.YOUR_VERCEL_TOKEN}
