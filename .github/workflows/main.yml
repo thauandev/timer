@@ -1,7 +1,7 @@
 name: Vercel Production Deployment
 env:
-  VERCEL_ORG_ID: thauandev
-  VERCEL_PROJECT_ID: timer
+  VERCEL_ORG_ID: prj_OrsYyEkWb0wgWyx5JiM1YJZPxo8O
+  VERCEL_PROJECT_ID: fo5cfjNO3VlCGa35WMV9EL8f
 on:
   push:
     branches:
