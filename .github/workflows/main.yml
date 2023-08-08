@@ -16,7 +16,7 @@ jobs:
         run: npm install # Ou yarn install, dependendo das suas configurações
 
       - name: Build
-        run: npm run build --transpileOnly # Ou o comando necessário para construir o seu app
+        run: npm run build # Ou o comando necessário para construir o seu app
 
       - name: Deploy to Vercel
         run: npx vercel --prod --yes
