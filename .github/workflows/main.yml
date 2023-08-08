@@ -9,17 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install # Ou yarn install, dependendo das suas configurações
+      - name: Install dependencies
+        run: npm install # Ou yarn install, dependendo das suas configurações
 
-    - name: Build
-      run: npm run build # Ou o comando necessário para construir o seu app
+      - name: Build
+        run: npm run build # Ou o comando necessário para construir o seu app
 
-    - name: Deploy to Vercel
-      uses: vercel/actions@v20
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
+      - name: Deploy to Vercel
+        uses: vercel/actions
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-token: ${{ secrets.YOUR_VERCEL_TOKEN }}
