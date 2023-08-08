@@ -1,6 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { formatDistanceToNow } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
 import React, { useContext } from 'react'
 import { CyclesContext } from '../../contexts/CycleContext'
 import { HistoryContainer, HistoryList, Status } from './styles'
@@ -29,10 +27,11 @@ const History: React.FC = () => {
                 <td>{cycle.task}</td>
                 <td>{cycle.minutesAmount} minutos</td>
                 <td>
-                  {formatDistanceToNow(cycle.startDate, {
+                  {/* {formatDistanceToNow(cycle.startDate, {
                     addSuffix: true,
                     locale: ptBR,
-                  })}
+                  })} */}
+                  {`${cycle.startDate}`}
                 </td>
                 <td>
                   {cycle.finishedDate && (
