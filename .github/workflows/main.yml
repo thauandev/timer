@@ -1,22 +1,19 @@
-name: Deploy to Vercel
+name: Vercel Production Deployment
+
 on:
   push:
     branches:
-      - main # Ajuste a branch conforme necessário
-
+      - main
 jobs:
-  build:
+  Deploy-Production:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install # Ou yarn install, dependendo das suas configurações
-
-      - name: Build
-        run: npm run build # Ou o comando necessário para construir o seu app
-
-      - name: Deploy to Vercel
-        run: echo ${{ secrets.YOUR_VERCEL_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token= ${{ secrets.YOUR_VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --prod --token= ${{ secrets.YOUR_VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --prod --token=$ ${{ secrets.YOUR_VERCEL_TOKEN }}
